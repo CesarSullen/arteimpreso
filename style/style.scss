@@ -1,0 +1,101 @@
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  transition: all 0.2s;
+  list-style: none;
+  text-decoration: none;
+}
+
+// Typography
+@font-face {
+  font-family: "Barlow";
+  src: url("../typography/Barlow/Barlow-Regular.ttf ") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("../typography/Barlow/Barlow-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+// Colors
+$bg-color: #191818;
+$primary-color: #ecec1f;
+$font-color: #ededed;
+
+// Utilities
+.important-text {
+  color: $primary-color;
+}
+.bold {
+  font-weight: 600;
+}
+
+// Animations
+@keyframes neon-loop {
+  0% {
+    box-shadow: 0px 0px 15px 8px #5349c6;
+  }
+  50% {
+    box-shadow: 0px 0px 15px 15px #5349c6;
+  }
+  100% {
+    box-shadow: 0px 0px 15px 8px #5349c6;
+  }
+}
+
+body {
+  background-color: $bg-color;
+  color: $font-color;
+  font-family: "Barlow";
+}
+
+.body-container {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-content {
+  margin-bottom: 1.5rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-section {
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.ad-section {
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    /* box-shadow: 0px 0px 15px 8px #5349c6; */
+    animation: neon-loop 3s infinite ease-in-out;
+  }
+}
