@@ -41,13 +41,13 @@ $font-color: #ededed;
 // Animations
 @keyframes neon-loop {
   0% {
-    box-shadow: 0px 0px 15px 8px $primary-color;
+    box-shadow: 0px 0px 15px 2px $primary-color;
   }
   50% {
-    box-shadow: 0px 0px 15px 15px $primary-color;
+    box-shadow: 0px 0px 15px 25px $primary-color;
   }
   100% {
-    box-shadow: 0px 0px 15px 8px $primary-color;
+    box-shadow: 0px 0px 15px 2px $primary-color;
   }
 }
 
@@ -102,8 +102,7 @@ p {
 .carousel {
   position: relative;
   max-width: 600px;
-  margin: 0 auto;
-
+  margin: auto;
   width: 100%;
 }
 
@@ -111,7 +110,7 @@ p {
   display: flex;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  animation: neon-loop 3s infinite ease-in-out;
+  animation: neon-loop 5s infinite ease-in-out;
 }
 
 .carousel-images img {
@@ -127,17 +126,23 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #333;
-  color: #fff;
-  padding: 5px 10px;
+  background: none;
+  padding: 5px 5px;
   border: none;
+  border-radius: 100vh;
   cursor: pointer;
+
+  img {
+    width: 50px;
+  }
 }
 
 #prevBtn {
-  left: 0;
+  left: 10px;
+  transform: rotate(90deg);
 }
 
 #nextBtn {
-  right: 0;
+  right: 10px;
+  transform: rotate(-90deg);
 }
