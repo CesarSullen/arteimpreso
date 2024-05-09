@@ -34,6 +34,9 @@ $font-color: #ededed;
 .bold {
   font-weight: 600;
 }
+.underline {
+  text-decoration: underline;
+}
 
 // Animations
 @keyframes neon-loop {
@@ -52,6 +55,10 @@ body {
   background-color: $bg-color;
   color: $font-color;
   font-family: "Barlow";
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
 
 .body-container {
@@ -91,10 +98,46 @@ body {
   }
 }
 
-.ad-section {
-  img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    animation: neon-loop 3s infinite ease-in-out;
-  }
+// Carousel
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+
+  width: 100%;
+}
+
+.carousel-images {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  animation: neon-loop 3s infinite ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  display: none;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
 }
