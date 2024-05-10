@@ -1,3 +1,8 @@
+// Reload
+window.onload = function () {
+  location.reload(true);
+};
+
 // Carousel
 const images = document.querySelectorAll(".carousel-images img");
 let currentImage = 0;
