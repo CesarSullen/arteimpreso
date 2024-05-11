@@ -41,6 +41,16 @@
     box-shadow: 0px 0px 15px 1px #ecec1f;
   }
 }
+.fade-in {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.fade-in.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 body {
   background-color: #191818;
   color: #ededed;
@@ -96,8 +106,8 @@ p {
   display: flex;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  border: solid 2px #ecec1f;
-  animation: neon-loop 5s infinite ease-in-out;
+  border: solid 2px #191818;
+  animation: neon-loop 3s infinite ease-in-out;
 }
 
 .carousel-images img {

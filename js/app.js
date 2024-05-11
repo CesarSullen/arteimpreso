@@ -1,8 +1,3 @@
-// Reload
-window.onload = function () {
-  location.reload(true);
-};
-
 // Carousel
 const images = document.querySelectorAll(".carousel-images img");
 let currentImage = 0;
@@ -33,6 +28,18 @@ let timer = setInterval(nextImage, 5000);
 document.querySelectorAll("#prevBtn, #nextBtn").forEach((btn) => {
   btn.addEventListener("click", () => {
     clearInterval(timer);
-    timer = setInterval(nextImage, 5000);
+    timer = setInterval(nextImage, 7000);
   });
+});
+
+// Interception Observer
+const fadeIn = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle("show", entry.isIntersecting);
+  });
+});
+fadeIn.forEach((section) => {
+  observer.observe(section);
 });
