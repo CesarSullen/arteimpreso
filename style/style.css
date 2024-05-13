@@ -17,8 +17,27 @@
   font-weight: 600;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .underline {
   text-decoration: underline;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ecec1f;
+  color: #191818;
+}
+.btn:hover {
+  box-shadow: 0 0 10px 1px #ecec1f;
 }
 
 @keyframes neon-loop {
@@ -46,6 +65,7 @@ body {
   background-color: #191818;
   color: #ededed;
   font-family: "Barlow";
+  font-size: 1.1rem;
 }
 
 p {
@@ -92,6 +112,19 @@ p {
   margin: auto;
   width: 100%;
 }
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 100vh;
+  cursor: pointer;
+}
+.carousel button img {
+  width: 50px;
+}
 
 .carousel-images {
   display: flex;
@@ -108,20 +141,6 @@ p {
 
 .carousel-images img.active {
   display: block;
-}
-
-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  padding: 5px 5px;
-  border: none;
-  border-radius: 100vh;
-  cursor: pointer;
-}
-button img {
-  width: 50px;
 }
 
 #prevBtn {
