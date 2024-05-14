@@ -40,10 +40,16 @@ $font-color: #ededed;
   max-width: 400px;
   background-color: $primary-color;
   color: $bg-color;
+  margin: auto;
 
   &:hover {
     box-shadow: 0 0 10px 1px $primary-color;
   }
+}
+.body-container {
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
 // Animations
@@ -79,12 +85,6 @@ body {
 
 p {
   margin-bottom: 1.5rem;
-}
-
-.body-container {
-  padding: 1.5rem;
-  max-width: 1000px;
-  margin: auto;
 }
 
 .section {
