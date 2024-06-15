@@ -73,6 +73,7 @@ body {
   color: #ededed;
   font-family: "Barlow";
   font-size: 1.1rem;
+  overflow-x: hidden;
 }
 
 p {
